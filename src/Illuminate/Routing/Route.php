@@ -181,7 +181,6 @@ class Route
             if ($this->isControllerAction()) {
                 return $this->runController();
             }
-
             return $this->runCallable();
         } catch (HttpResponseException $e) {
             return $e->getResponse();
